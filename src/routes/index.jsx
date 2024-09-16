@@ -2,12 +2,13 @@ import { useRoutes } from "react-router-dom";
 import Suspense from "../utils";
 import { lazy } from "react";
 const Home = lazy(() => import("../routes/home/Home"));
-const Profile = lazy(() => import("./profiles/Profiles"));
 const Private = lazy(() => import("../routes/private/Private"));
+const Profile = lazy(() => import("./profiles/Profiles"));
 const Auth = lazy(() => import("../routes/auth/Auth"));
 const Login = lazy(() => import("../routes/auth/login/Login"));
-const NotFound = lazy(() => import("../routes/not-found/NotFound"));
 const SignUp = lazy(() => import("./auth/signup/Signup"));
+const NotFound = lazy(() => import("../routes/not-found/NotFound"));
+
 
 const RouteController = () => {
   return useRoutes([
