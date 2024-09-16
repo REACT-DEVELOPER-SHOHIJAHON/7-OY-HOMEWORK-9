@@ -1,6 +1,8 @@
 import { api } from "./index"
 
+
 const authApi = api.injectEndpoints({
+
     endpoints: (build) => ({
         SignUp: build.mutation({
             query: (body) => ({
@@ -9,6 +11,7 @@ const authApi = api.injectEndpoints({
                 body
             })
         }),
+        
         login:build.mutation({
             query:(body)=> ({
                 url:"auth/login",
@@ -18,4 +21,5 @@ const authApi = api.injectEndpoints({
         })
     })
 })
+
 export const { useSignUpMutation,useLoginMutation } = authApi
