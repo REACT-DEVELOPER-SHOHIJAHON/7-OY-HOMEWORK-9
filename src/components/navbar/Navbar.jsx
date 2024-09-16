@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  
   return (
     <nav className="bg-gradient-to-r from-purple-700 to-indigo-800 p-4 shadow-lg relative">
       <div className="container mx-auto flex justify-between items-center">
