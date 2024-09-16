@@ -6,15 +6,20 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 
+
 const { Title, Text } = Typography;
 
+
 const Login = () => {
+  
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [logInRequest, { data, isSuccess }] = useLoginMutation();
 
+  
   const onFinish = (values) => {
     logInRequest(values);
+    
   };
 
   useEffect(() => {
@@ -28,12 +33,16 @@ const Login = () => {
     }
   }, [isSuccess, dispatch, navigate, data]);
 
+  
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
+  
 
   return (
+    
     <div className="max-w-sm w-full bg-white p-8 rounded-lg shadow-lg">
+      
       <Title level={2} className="text-center text-gray-800 mb-6">
         Login
       </Title>
@@ -46,8 +55,8 @@ const Login = () => {
           const values = Object.fromEntries(formData);
           onFinish(values);
         }}
-        autoComplete="off"
-      >
+        autoComplete="off">
+        
         <div className="mb-4">
           <label
             htmlFor="username"
@@ -93,8 +102,11 @@ const Login = () => {
             Sign Up
           </Link>
         </Text>
+        
       </form>
+      
     </div>
+    
   );
 };
 
