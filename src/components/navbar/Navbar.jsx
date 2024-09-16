@@ -47,7 +47,7 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-          {/* Search Bar */}
+          
           <input
             type="text"
             placeholder="Search..."
@@ -55,7 +55,7 @@ const Navbar = () => {
           />
         </div>
 
-        {/* Mobile Menu Button */}
+        
         <button
           className="md:hidden text-white focus:outline-none"
           onClick={toggleMobileMenu}
@@ -77,7 +77,7 @@ const Navbar = () => {
           </svg>
         </button>
 
-        {/* Mobile Menu */}
+        
         <div
           className={`md:hidden absolute top-16 right-0 bg-white text-gray-800 w-64 rounded-md shadow-lg transition-transform duration-300 transform ${
             isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
