@@ -5,15 +5,20 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 
+
 const { Title, Text } = Typography;
 
+
 const SignUp = () => {
+  
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [signUpRequest, { data, isSuccess }] = useSignUpMutation();
   const onFinish = (values) => {
-    signUpRequest(values);
+  signUpRequest(values);
+    
   };
+  
   console.log(data);
 
   useEffect(() => {
@@ -26,9 +31,12 @@ const SignUp = () => {
     }
   }, [isSuccess]);
 
+  
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
+
+  
   return (
     <>
       <Form
